@@ -23,4 +23,9 @@ search(formInputs) {
   console.log(this.dateTo);
 }
 
+submitForm(){
+  //do nothing
+  //console.log();
+}
+
 }
