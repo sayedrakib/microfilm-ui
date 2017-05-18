@@ -16,14 +16,12 @@
         </div>>
     </div>
     <div class="content">
-        <form #microForm="ngForm" (ngSubmit)="submitForm()">
-            <input type="text" name="paperName" #textInput [(ngModel)]="paperName">
-            <label for="from">From</label>
-            <input type="text" id="from" ngModel name="dateFrom" #from>
-            <label for="to">to</label>
-            <input type="text" id="to" ngModel name="dateTo" #to>
-            <button type="submit" (click)="search(from.value + ',' + to.value)"> click </button>
-        </form>
+        <div class="container">
+            <app-form (searchEvent)="search($event)"> </app-form>
+        </div>
+        <div class="container text-center">
+            <app-result [searchResults]="searchResults"> </app-result>
+        </div>
     </div>
     <div class="footer">
         <div class="uni-logo">
