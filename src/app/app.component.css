@@ -9,10 +9,33 @@
 }
 .header {
     background-color: #002957;
-    color: #fff;
     height: 90px;
     font-size: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
+ul-continer {
+    align-items: center;
+}
+.header ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+    overflow: hidden;
+}
+.header li {
+     float: left;
+     display: block;
+     white-space: nowrap;
+}
+.header li a {
+     color: white;
+     
+}
+
 .content {
     padding: 10px;
     padding-bottom: 130px;
@@ -39,8 +62,9 @@
 }
 .header .separator {
     color: #f1563f;
+    margin: 0 5px 0 1px;
 }
-
+/*
 .social-links {
     margin-left: 15%;
     height: 120px;
@@ -58,6 +82,7 @@
 .social-links i {
     color: #f1563f;
 }
+*/
 .uni-name {
     height: 120px;
     font-size: 32px;
@@ -72,6 +97,7 @@
     margin-top: 40px;
     display: block;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .uni-logo {

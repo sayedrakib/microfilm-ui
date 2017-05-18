@@ -1,29 +1,36 @@
 <div class="wrapper">
-   <div class="header">
-      <p class="container">
-         <a href="https://www.jyu.fi/en/">University of Jyväskylä</a>
-         <span class="separator">|</span>
-         <a href="https://osc.jyu.fi/en">Open Science Center</a>
-         <span class="separator">|</span>
-         <a href="/">Thesis Search</a>
-      </p>
-   </div>
-   <div class="content">
-      <form #microForm="ngForm" (ngSubmit)="submitForm()">
-         <input type="text" name="paperName"  #textInput [(ngModel)]="paperName">
-         <label for="from">From</label>
-         <input type="text" id="from" ngModel name="dateFrom" #from >
-         <label for="to">to</label>
-         <input type="text" id="to" ngModel name="dateTo" #to>
-         <button type="submit" (click)="search(from.value + ',' + to.value)" > click </button>
-      </form>
-   </div>
-   <div class="footer">
-      <div class="uni-logo">
-         <a href="https://www.jyu.fi/en/" class='site-logo'> </a>
-      </div>
-      <div class="uni-name">
-         <a href="https://www.jyu.fi/en/">University of Jyväskylä</a>
-      </div>
-   </div>
+    <div class="header">
+        <div class="container">
+            <div class="ul-continer">
+                <ul>
+                    <li> <a href="https://www.jyu.fi/en/">University of Jyväskylä</a>
+                        <span class="separator">|</span>
+                    </li>
+                    <li> <a href="https://osc.jyu.fi/en">Open Science Center</a>
+                        <span class="separator">|</span>
+                    </li>
+                    <li> <a href="/">Thesis Search</a>
+                    </li>
+                </ul>
+            </div>
+        </div>>
+    </div>
+    <div class="content">
+        <form #microForm="ngForm" (ngSubmit)="submitForm()">
+            <input type="text" name="paperName" #textInput [(ngModel)]="paperName">
+            <label for="from">From</label>
+            <input type="text" id="from" ngModel name="dateFrom" #from>
+            <label for="to">to</label>
+            <input type="text" id="to" ngModel name="dateTo" #to>
+            <button type="submit" (click)="search(from.value + ',' + to.value)"> click </button>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="uni-logo">
+            <a href="https://www.jyu.fi/en/" class='site-logo'> </a>
+        </div>
+        <div class="uni-name">
+            <a href="https://www.jyu.fi/en/">University of Jyväskylä</a>
+        </div>
+    </div>
 </div>
