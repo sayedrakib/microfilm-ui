@@ -1,0 +1,12 @@
+<div class="search-cmp-container">
+  	<div class="form-container">
+              <form #microForm="ngForm" (ngSubmit)="submitForm()">
+            <input type="text" name="paperName" #textInput [(ngModel)]="paperName">
+            <label for="from">From</label>
+            <input type="text" id="from" ngModel name="dateFrom" #fromDate>
+            <label for="to">to</label>
+            <input type="text" id="to" ngModel name="dateTo" #toDate>
+            <button type="submit" class="btn btn-default" (click)="search(textInput.value + ','+ fromDate.value + ',' + toDate.value)"> click </button>
+        </form>
+  	</div>
+</div>

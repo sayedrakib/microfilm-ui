@@ -1,0 +1,9 @@
+.search-cmp-container {
+    padding-top: 1px;
+}
+.form-container {
+    /*border: 1px solid lightgrey;*/
+    border-radius: 3px;
+    padding: 2px 8px 12px 8px;
+    background-color: #e9e9e9;
+}

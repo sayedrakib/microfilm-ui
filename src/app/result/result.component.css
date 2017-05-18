@@ -1,0 +1,11 @@
+table[data-sortable].sortable-theme-bootstrap {
+  font-family: Lato,sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #002957;
+  background: white;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  margin-top: 10px; 
+
+}
