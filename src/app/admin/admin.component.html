@@ -1,3 +1,71 @@
-<p>
-  admin works!
-</p>
+<div class="container">
+  <h3> Add Microfilms </h3>
+  <form [formGroup]="adminForm" novalidate (ngSubmit)="save(adminForm)">
+
+    <!-- Roll number-->
+    <div class="form-group">
+      <label>Roll number</label>
+      <input type="text" formControlName="roll_no">
+      <!--display error message if name is not valid-->
+      <small *ngIf="!adminForm.controls.roll_no.valid" class="text-danger">
+            Roll number is required (minimum 3 characters).
+        </small>
+      <label>Location</label>
+      <input type="text" formControlName="location">
+      <!--display error message if name is not valid-->
+      <small *ngIf="!adminForm.controls.location.valid" class="text-danger">
+            Roll number is required (minimum 3 characters).
+        </small>
+    </div>
+    <!-- list of newspapers -->
+    <div formArrayName="newspapers">
+      <div *ngFor="let newspaper of adminForm.controls.newspapers.controls; let i=index">
+
+        <!-- newspaper header, show remove button when more than one newspaper available -->
+        <div>
+          <span> Newspaper {{i + 1}} </span>
+          <span class="glyphicon glyphicon-remove pull-right" *ngIf="adminForm.controls.newspapers.length > 1" (click)="removeNewspaper(i)"> </span>
+        </div>
+
+        <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+        <div [formGroupName]="i">
+          <!--Name of the Newspaper -->
+          <div>
+            <label> Name </label>
+            <input type="text" formControlName="name">
+            <!--display error message if street is not valid-->
+            <!--  <small [hidden]="myForm.controls.newspapers.controls[i].controls.name.valid">
+                        Street is required
+                   </small>
+                   -->
+          </div>
+          <!--Date from -->
+          <div>
+            <label> Date From </label>
+            <input type="date" formControlName="date_from">
+          </div>
+          <!--Date to -->
+          <div>
+            <label> Date To </label>
+            <input type="date" formControlName="date_to">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div>
+      <a (click)="addNewspaper()" style="cursor: pointer">
+            Add another newspaper +
+          </a>
+    </div>
+
+    <button type="submit" (click)="save(adminForm.value)" [disabled]="!adminForm.valid"> Submit </button>
+
+    <div class="">
+      <div>myForm details:-</div>
+      <pre>Is adminForm valid?: <br>{{adminForm.valid | json}}</pre>
+      <pre>form value: <br>{{adminForm.value | json}}</pre>
+    </div>
+
+  </form>
+</div>

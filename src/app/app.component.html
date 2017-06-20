@@ -16,12 +16,9 @@
         </div>>
     </div>
     <div class="content">
-        <div class="container">
-            <app-form (searchEvent)="search($event)"> </app-form>
-        </div>
-        <div class="container text-center">
-            <app-result [searchResults]="searchResults"> </app-result>
-        </div>
+
+        <router-outlet></router-outlet>
+        
     </div>
     <div class="footer">
         <div class="uni-logo">
