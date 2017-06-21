@@ -16,7 +16,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.adminForm = this._fb.group({
-      roll_no: ['', [Validators.required, Validators.minLength(3)]],
+      roll_no: [''], // roll_no: ['', [Validators.required, Validators.minLength(3)]]
       location: [''],
       newspapers: this._fb.array([
         this.initNewspaper() 
